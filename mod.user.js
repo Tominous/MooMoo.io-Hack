@@ -57,7 +57,7 @@ window.sessionStorage.force = coreURL.searchParams.get("fc");
 
 if (window.sessionStorage.force != "false" && window.sessionStorage.force && window.sessionStorage.force.toString() != "null"){
     console.error(window.sessionStorage.force);
-    /*alert(window.location.force);*/
+    alert(window.location.force);
     document.getElementsByClassName("menuHeader")[0].innerHTML = `Servers <span style="color: red;">Force (${window.sessionStorage.force})</span>`;
 }
 
@@ -1314,11 +1314,11 @@ speedContain.id = "speedContain";
 itemTitle.id = "itemTitle";
 settingsDiv.appendChild(settingsSlider);
 speedContain.appendChild(currentSpeed);
-/*document.querySelector("#setupCard").appendChild(itemTitle);
+document.querySelector("#setupCard").appendChild(itemTitle);
 document.querySelector("#setupCard").appendChild(settingsDiv);
 document.querySelector("#setupCard").appendChild(speedContain);
 $("#healSlider").css({width: "100%", marginTop: 10});
-$("#itemTitle").css({fontWeight: '100', fontSize: 25, width: "100%", textAlign: "center", fontFamily: "sans-serif"});*/
+$("#itemTitle").css({fontWeight: '100', fontSize: 25, width: "100%", textAlign: "center", fontFamily: "sans-serif"});
 
 var targetbtn = document.createElement("img");
 targetbtn.src = "https://i.imgur.com/gWzcwQR.png";
@@ -1368,7 +1368,7 @@ menuChange.innerHTML = `
 <h3 id="createdEnd">Created by Cloudy#9558 | <a href="https://discordapp.com/invite/s4F4wZh">Join My Discord</a></h3>
 </div>
 `
-//document.querySelector("#menuCardHolder").prepend(menuChange);
+document.querySelector("#menuCardHolder").prepend(menuChange);
 
 var hatChangeAlert = document.createElement("div");
 hatChangeAlert.id = "hatChangeAlert";
@@ -1938,7 +1938,7 @@ $("#enterGame").click( () => {
 
 });
 
-//$("#adCard").css({display: "none"});
+$("#adCard").css({display: "none"});
 
 $("#youtuberOf").css({display: "none"});
 let newImg = document.createElement("img");
@@ -1999,7 +1999,7 @@ console.error(unsafeWindow);
 
 unsafeWindow.WebSocket.prototype.oldSend = WebSocket.prototype.send;
 unsafeWindow.WebSocket.prototype.send = function(m){
-    //console.info(new Uint8Array(m));
+    console.info(new Uint8Array(m));
 
     if (targets.every(x=>x==false)){
         for (let elementDiv of document.getElementsByClassName("spotDiv")){
@@ -2032,7 +2032,7 @@ unsafeWindow.WebSocket.prototype.send = function(m){
 
     this.oldSend(m);
 
-    /*if (Array.from(x).every( (num, idx) => START_SSWX[idx]==num )){
+    if (Array.from(x).every( (num, idx) => START_SSWX[idx]==num )){
         setTimeout( () => {
             if (noallow){
               noallow = false;
@@ -2043,11 +2043,11 @@ unsafeWindow.WebSocket.prototype.send = function(m){
         }, 10);
     } else {
     this.oldSend(m);
-    }*/
+    }
 
-    //console.info(x);
+    console.info(x);
     let x_arr_SSX = Array.from(x);
-    //console.log(x_arr_SSX);
+    console.log(x_arr_SSX);
     if (x_arr_SSX.length === 6 && autobull){
          if (x_arr_SSX.every( (num, idx) => START_SSWX[idx]==num )){
              console.info("started swing");
@@ -2065,12 +2065,12 @@ unsafeWindow.WebSocket.prototype.send = function(m){
     }
 
 
-    /*let usageArray = Array.from(new Uint8Array(m));
+    let usageArray = Array.from(new Uint8Array(m));
     if (usageArray.length == 45){
         if (usageArray[16] == 0 || usageArray[16] == 1) foodInHand = false;
         console.info(`Food in hand: null{foodInHand}`);
 
-    };*/
+    };
 
     let realData = {}
     let realInfo = msgpack5.decode(x);
@@ -2079,22 +2079,22 @@ unsafeWindow.WebSocket.prototype.send = function(m){
     } else {
         realData.data = realInfo
     }
-    //console.log(realData)
-    //console.info("sent");
-    //console.info(realData.data);
+    console.log(realData)
+    console.info("sent");
+    console.info(realData.data);
     if (realData.data[0] == "ch"){
        lastWords = realData.data[1];
 
 
     }
      if(realData.data[0]!="2")  {
-         // console.info("HERE3");
-       // console.info(realData.data[0])
+          console.info("HERE3");
+        console.info(realData.data[0])
       console.info(realData.data);
-         // console.log(x);
+          console.log(x);
     if (realData.data[0]=="3"){
-         //console.info(realData.data[1]);
-         /*console.info(new Uint8Array(m));
+         console.info(realData.data[1]);
+         console.info(new Uint8Array(m));
          if(typeof realData.data[1] != "number" && !nval){
              nval = realData.data[1];
              document.n = nval;
@@ -2102,18 +2102,18 @@ unsafeWindow.WebSocket.prototype.send = function(m){
              console.info(nval);
 
 
-         }*/
-        /*console.info(typeof realData.data[2]);
+         }
+        console.info(typeof realData.data[2]);
         console.info(realData.data[2].buffer);
         goodData = realData.data;
         console.info(goodData);
         console.info(["5", 0, nval]);
         document.n = goodData[2];
-        document.nval = nval*/
+        document.nval = nval
     }
      }
-    //console.info(new Date().getTime());
-    // console.log(realData.data[0]);
+    console.info(new Date().getTime());
+     console.log(realData.data[0]);
     if (realData.data[0]=="s"){
       console.info("user respawned");
        for (var elem of Object.values(allMooMooObjects)){
@@ -2146,12 +2146,12 @@ unsafeWindow.WebSocket.prototype.send = function(m){
 
     } else if (realData.data[0]=="2"){
       MYANGLE = realData.data[1];
-        //console.log("ANGLE");
+        console.log("ANGLE");
 
     } else if (realData.data[0]=="5") {
-       //console.info("hai");
-        //console.info(new Uint8Array(m));
-        //console.info(realData.data);
+       console.info("hai");
+        console.info(new Uint8Array(m));
+        console.info(realData.data);
     }
 };
 
@@ -2267,9 +2267,9 @@ function handleMessage(m){
 		autoattack = secondVote;
 
     let td = new Uint8Array(m.data);
-//      console.info(td);
-    //console.info(td);
-    //console.info(td.slice(98,-1));
+      console.info(td);
+    console.info(td);
+    console.info(td.slice(98,-1));
     var infotest = msgpack5.decode(td);
     var info;
     if(infotest.length > 1) {
@@ -2281,21 +2281,21 @@ function handleMessage(m){
         info = infotest;
     }
 
-// console.log(info);
-   //console.info("received");
-    //console.info(new Date().getTime());
+ console.log(info);
+   console.info("received");
+    console.info(new Date().getTime());
     if(!info) return;
-    //if(!["c","5", "3"].includes(info[0])) console.log(info[0])
+    if(!["c","5", "3"].includes(info[0])) console.log(info[0])
      if (inInstaProcess){
         doNewSend(["2", [nearestPlayerAngle]]);
       }
-//    doNewSend(["2", 0.45]);
+    doNewSend(["2", 0.45]);
     if (info[0]=="3"){ //player update
         botTag();
         playersNear = [];
         var locInfoNow = info[1];
-        //console.log(locInfoNow)
-        //console.info(locInfoNow);
+        console.log(locInfoNow)
+        console.info(locInfoNow);
         for (var i=0;i<locInfoNow.length/13;i++){
             var playerData = locInfoNow.slice(13*i, 13*i+13);
             if (playerData[0]==MYID){
@@ -2406,11 +2406,11 @@ function handleMessage(m){
                $("#tbtn").css({opacity: 1, marginLeft: nearestPlayer.x-myPlayer.x+window.innerWidth/2-20, marginTop: nearestPlayer.y-myPlayer.y+window.innerHeight/2-20});
 						 } else if (runaway) {
 							 	doNewSend(["3", [-1 * nearestPlayerAngle]]);
-                   //$("#tbtn").animate({opacity: 0.5});
+                   $("#tbtn").animate({opacity: 0.5});
                }
            } else {
 						 CORESTATE.nearenemy.active = false;
-             // $("#tbtn").animate({opacity: 0.5});
+              $("#tbtn").animate({opacity: 0.5});
            }
 
     }
@@ -2480,7 +2480,7 @@ function handleMessage(m){
 			}
     }
 
-//    console.info("-------------")
+    console.info("---------------")
     if (info[0] == "1" && !MYID){
         MYID =  info[1];
     }
@@ -2498,7 +2498,7 @@ function handleMessage(m){
        recentHealth = info[2];
        console.info("RECEIVED:");
         console.info(info);
-        //recentHealth += hasApple ? 20 : 40;
+        recentHealth += hasApple ? 20 : 40;
        console.info("heal notif sent");
        setTimeout( () => {
            heal();
@@ -2554,7 +2554,7 @@ function havePoison(){
     return hasPoison;
 }
 
-/*$(window).resize( () => {
+$(window).resize( () => {
      for (var elem of Object.values(allMooMooObjects)){
         let mapDisplay = document.getElementById("mapDisplay").getBoundingClientRect();
             let mapSize = [14365, 14365];
@@ -2564,7 +2564,7 @@ function havePoison(){
             console.log(x, y);
             elem.style = `background-image: url("${elem.rimgURL}"); background-size: 12px 12px; width:12px; height:12px; position:absolute; left: ${x}px; top:${y}px; opacity:0; z-index:100; cursor: pointer;`;
      }
-});*/
+});
 
 function haveGreat(){
     let hasGreat = true;
@@ -2685,8 +2685,8 @@ document.addEventListener('keypress', (e)=>{
    if (e.keyCode == 116 && document.activeElement.id.toLowerCase() !== 'chatbox'){
        STATE+=1;
        let coreIndex = STATE%2; //STATE%4;
-       //let truthArray = [ [1,2].includes(coreIndex), [0,1].includes(coreIndex)];
-       //autobull = truthArray[0];
+       let truthArray = [ [1,2].includes(coreIndex), [0,1].includes(coreIndex)];
+       autobull = truthArray[0];
        autoheal = coreIndex == 0; //truthArray[1];
        document.title = document.title=`CloudyMod: Autoheal ${autoheal ? "ON" : "OFF"}` //"Heal " + (autoheal ? "ON" : "OFF") + " / Bull Hat " + (autobull ? "ON" : "OFF");
    } else if (e.keyCode == trapKey && document.activeElement.id.toLowerCase() !== 'chatbox') { //Place a trap
@@ -2854,10 +2854,10 @@ document.addEventListener('keypress', (e)=>{
 
          for (var i=0;i<4;i++){
              let angle = (Math.PI/2)*i;
-             /*let x = Math.cos(angle)*50;
+             let x = Math.cos(angle)*50;
              let y = Math.sin(angle)*50;
              console.log(x, y);
-             aim(x, y);*/
+             aim(x, y);
              document.dns(["2", [angle]]);
              placeSpike(spikeVal);
 
